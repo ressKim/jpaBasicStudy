@@ -10,5 +10,4 @@ public class StudyJpaBasicApplication {
 
         SpringApplication.run(StudyJpaBasicApplication.class, args);
     }
-
 }
