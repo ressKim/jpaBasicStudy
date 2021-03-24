@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -14,9 +15,10 @@ import javax.persistence.Persistence;
 class MemberTest {
 
 
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory();
-
-    EntityManager em = emf.createEntityManager();
+//    EntityManagerFactory emf = Persistence.createEntityManagerFactory();
+//
+//    EntityManager em = emf.createEntityManager();
+     EntityManager em;
 
 
 
