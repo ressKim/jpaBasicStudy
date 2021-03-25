@@ -4,17 +4,18 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
 @Setter
 @Getter
+//@SequenceGenerator(name = "member_seq_generator", sequenceName = "member_seq")
 public class Member {
-
+    //sequence 전략, identity 전략
     @Id
-    @GeneratedValue
+//    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "member_seq_generator")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(unique = true, length = 10)
