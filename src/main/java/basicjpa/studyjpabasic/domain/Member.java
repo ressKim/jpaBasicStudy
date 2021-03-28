@@ -14,16 +14,15 @@ public class Member {
 
     @Id
     @GeneratedValue
-    @Column(name = "member_id")
+    @Column(name = "MEMBER_ID")
     private Long id;
 
+    @Column(name = "USERNAME")
     private String name;
 
-    private String city;
-
-    private String street;
-
-    private String zipcode;
+    @ManyToOne
+    @JoinColumn(name = "TEAM_ID")
+    private Team team;
 
 }
 
