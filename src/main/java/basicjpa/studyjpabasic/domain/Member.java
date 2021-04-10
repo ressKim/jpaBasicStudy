@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -17,12 +18,14 @@ public class Member {
 
     @Id
     @GeneratedValue
+    @Column(name = "MEMBER_ID")
     private Long id;
 
     @OneToMany(mappedBy = "delivery")
     private List<Order> orderList = new ArrayList<>();
 
-    private String name;
+
+    private LocalDateTime orderDate;
 
     @Embedded
     private Address homeAddress;
